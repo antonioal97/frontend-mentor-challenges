@@ -1,0 +1,160 @@
+:root{
+  --bright-yellow: hsl(71, 73%, 54%);
+  --cyan--100: #4ABEBD; 
+  --cyan--200: #2BB2B1; 
+  --cyan: hsl(179, 62%, 43%);
+  -grayish-blue: hsl(218, 22%, 67%);
+  -light-gray: hsl(204, 43%, 93%);
+
+}
+
+ul,li,button,h1,h2,p{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header, section, footer{
+  padding: 1.5rem;
+}
+
+section, footer{
+  color: #fff;
+}
+
+h2{
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+section h2, footer h2{
+  color: #fff;
+}
+
+body{
+  background-color: #E6EFF6;
+  display: grid;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.125rem;
+  line-height: 24pt;
+  min-height: 100vh;
+  place-content: center;
+  font-weight: 400;
+}
+
+article{
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, .02), -4px -4px 16px rgba(0, 0, 0, .05);
+  max-width: 400px;
+}
+
+li{
+  font-weight: 200;
+  list-style: none;
+  opacity: .9;
+}
+
+
+/*======HEADER=========*/
+header{
+  color: #ACB0B7;
+  padding-bottom: 2rem;
+}
+h1{
+  color: var(--cyan);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+h1 + h2{
+  color: var(--bright-yellow);
+  font-size: 20px;
+}
+/*====== Preços =========*/
+section{
+  background: var(--cyan--200);
+}
+
+section p{
+  margin-bottom: 2rem;
+}
+
+.c-price{
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+
+.c-price :first-child{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.c-price :last-child {
+  opacity: .5;
+}
+
+button{
+  background: var(--bright-yellow);
+  border-radius: 8px;
+  border: none;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.03) ;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  padding: 1.3rem;
+  transition: filter ease-in 250ms;
+  width: 100%;
+}
+
+button:hover{
+  filter: brightness(1.1);
+}
+
+/*====== Footer =========*/
+
+footer{
+  background: var(--cyan--100);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+}
+
+
+/*====== Breakpoints =========*/
+
+@media screen and (min-width: 980px){
+  article{
+    display: flex;
+    max-width: 980px;
+    flex-wrap: wrap;
+  }
+  
+  header, section, footer{
+    padding: 3rem;
+  }
+
+  article > :first-child {
+    flex: 1 0 1;
+  }
+
+  article > :nth-child(2),
+  article > :nth-child(3) {
+    flex: 1;
+  }
+  
+  article > :nth-child(2) {
+    border-bottom-left-radius: 8px;
+  }
+
+  article > :nth-child(3) {
+    border-bottom-left-radius: 0;
+  }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
